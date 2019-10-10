@@ -10476,6 +10476,11 @@ hr.style-two {
   display: block;
   text-align: center;
   text-decoration: none;
+  color: #E96524;
+}
+
+.social-link:hover {
+  color: #ee8652;
 }
 
 .messenger, .messenger-item {
