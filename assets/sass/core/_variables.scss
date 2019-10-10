@@ -19,20 +19,20 @@ $selectionFontColor: #fff;
 
 // BODY
 $bodyBgColor: #fff; //white
-$bodyFontColor: #000; // black
+$bodyFontColor: $themeColorOne; // black
 
 // HEADER: цвет фона шапки сайта
-$headerBgColor: $themeColorOne;
-$headerFontColor: #fff;
+$headerBgColor: #fff;
+$headerFontColor: $themeColorOne;
 
 // Text Highlight: цвет фона и текста при добавлении к нему .highlighted
 $textHighlightBgColor: $themeColorTwo;
 $textHighlightColor: #fff;
 
 // MENU
-$menuBgColor: $themeColorOne;
+$menuBgColor: #fff;
 $menuBgColorActive: $themeColorTwo;
-$menuFontColor: #fff;
+$menuFontColor: $themeColorOne;
 $menuFontColorActive: #fff;
 
 $navArrowColor: #fff;
@@ -58,9 +58,9 @@ $menu-close-color: #fff;
 $menuContainerMobilePaddingTop: 30%;
 
 // FOOTER
-$footerBgColor: $themeColorOne;
-$footerFontColor: #fff;
-$footerLinkColorActive: darken($footerFontColor, 5%);
+$footerBgColor: #F3F3F3;
+$footerFontColor: $themeColorOne;
+$footerLinkColorActive: $themeColorTwo;
 
 // WRAPPER
 $wrapperBgColor: #fff;

@@ -65,5 +65,15 @@
                 <span class="hamburger-inner"></span>
             </span>
             </button>
-            <div class="logo"><?php get_default_logo_link(); ?></div>
+            <div class="logo">
+	           <?php get_default_logo_link([
+                    'name'    => 'logo.svg',
+                    'options' => [
+                    'class'  => 'logo-img',
+                    'width'  => 100,
+                    'height' => 40,
+                        ],
+                    ])
+                ?>
+            </div>
         </div>

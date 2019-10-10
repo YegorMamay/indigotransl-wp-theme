@@ -11,13 +11,35 @@
         </div><!-- .pre-footer end-->
     <?php endif; ?>
 
-    <div class="copyright">
-        <p class="container">
-            <?php _e('Developed by', 'brainworks') ?>
-            <a href="https://brainworks.pro/" target="_blank">BRAIN WORKS</a>
-            &copy; <?php echo date('Y'); ?>
-        </p>
+<div class="copyright container">
+
+<?php get_default_logo_link([
+    'name'    => 'logo.svg',
+     'options' => [
+          'class'  => 'logo-img',
+          'width'  => 160,
+          'height' => 50,
+     ],
+]) ?>
+
+
+<?php
+    $email = get_theme_mod('bw_additional_email');
+    if (!empty($email)) { ?>
+<a href="mailto:<?php echo esc_attr($email); ?>">
+    <?php echo esc_html($email); ?>
+</a>
+<?php } ?>
+
+
+    <div class="developer">
+        <?php _e('Developed by', 'brainworks') ?> <a href="https://brainworks.pro/" target="_blank">BRAIN WORKS</a> &copy; <?php echo date('Y'); ?>
     </div>
+
+<?php echo do_shortcode('[bw-phone]'); ?>
+
+<?php echo do_shortcode('[bw-social]'); ?>
+</div>
 </footer>
 
 </div><!-- .wrapper end-->
