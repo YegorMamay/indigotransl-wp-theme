@@ -15,7 +15,7 @@
 <body <?php body_class(); ?> id="top">
 
 <?php wp_body_open(); ?>
-<div class="wrapper">
+<div class="wrapper"> <!--Не удалять!-->
     <header class="page-header">
         <div class="container">
             <div class="row">
@@ -25,8 +25,8 @@
                             'name'    => 'logo.svg',
                             'options' => [
                                 'class'  => 'logo-img',
-                                'width'  => 150,
-                                'height' => 60,
+                                'width'  => 130,
+                                'height' => 50,
                                 ],
                             ])
                         ?>

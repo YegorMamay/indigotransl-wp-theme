@@ -17,7 +17,7 @@
     'name'    => 'logo.svg',
      'options' => [
           'class'  => 'logo-img',
-          'width'  => 160,
+          'width'  => 130,
           'height' => 50,
      ],
 ]) ?>
