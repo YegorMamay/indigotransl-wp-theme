@@ -101,6 +101,10 @@ body {
     -moz-osx-font-smoothing: grayscale;
 }
 
+button{
+    font-family: $fontFamilyTwo;
+}
+
 .wrapper {
     position: relative;
     overflow-x: hidden;
@@ -144,6 +148,43 @@ img {
     text-align: center;
     margin-bottom: 30px;
 }
+
+.btn{
+    padding: 10px 30px;
+    font-size: 12px;
+    &-secondary{
+        background: linear-gradient(to right, #FFAA80, #E96524);
+        border: none;
+        border-bottom: 2px solid #BD470D;
+    }
+
+    &-outline-secondary{
+        border: 1px solid #E96524;
+        color: #222222;
+    }
+
+    &-outline-primary{
+        border: 1px solid #D0D0D0;
+
+    }
+    &-lg{
+        padding-top: 15px;
+        padding-bottom: 15px;
+        font-size: 12px;
+        width: 240px;
+        font-weight: 600;
+        &.btn-sedondary{
+            border-bottom: 4px solid #BD470D;
+        }
+    }
+    &-sm{
+        padding: 6px 20px;
+        &.btn-secondary{
+            border-bottom: 1px solid #BD470D;
+        }
+    }
+}
+
 
 .page-404 {
     width: 90%;
