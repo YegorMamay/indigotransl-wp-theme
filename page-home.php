@@ -151,7 +151,7 @@
     				</div>
     			</div>
     		</div>
-    		<div class="col-12">
+    		<div class="col-12 col-xs-12">
     			<div class="step_separator"></div>
     		</div>
     		<div class="col-12 col-sm-6 col-lg-3">
