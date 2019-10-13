@@ -369,6 +369,52 @@
 	color: #fff;
 }
 
+.menu-container{
+    
+}
+
+.page-header > .container > .row{
+    display: flex;
+    align-items: center;
+}
+
+.page-header{
+    .nav {
+        .menu-link{
+            font-size: 12px;
+        }
+        .menu-item{
+            padding-top: 2px;
+            padding-bottom: 2px;
+            border-right: 1px solid rgba(92, 92, 92, 0.2);
+            &-current{
+                border-bottom: none;
+            }
+        }
+    }
+    .social{
+        display: flex;
+        justify-content: flex-end;
+    }
+    
+}
+
+.footer{
+    font-size: 12px;
+    .phone-number{
+        font-size: 12px;
+    }
+
+}
+
+.copyright.container{
+    padding-left: 15px;
+    padding-right: 15px;
+    &::after{
+        display: none;
+    }
+}
+
 
 @media (max-width:1199.98px) {
     .step::after {
