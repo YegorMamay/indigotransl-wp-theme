@@ -8822,6 +8822,43 @@ hr.style-two {
   line-height: 25px;
   color: #fff; }
 
+.page-header > .container > .row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
+
+.page-header .nav .menu-link {
+  font-size: 12px; }
+
+.page-header .nav .menu-item {
+  padding-top: 2px;
+  padding-bottom: 2px;
+  border-right: 1px solid rgba(92, 92, 92, 0.2); }
+  .page-header .nav .menu-item-current {
+    border-bottom: none; }
+
+.page-header .social {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end; }
+
+.footer {
+  font-size: 12px; }
+  .footer .phone-number {
+    font-size: 12px; }
+
+.copyright.container {
+  padding-left: 15px;
+  padding-right: 15px; }
+  .copyright.container::after {
+    display: none; }
+
 @media (max-width: 1199.98px) {
   .step::after {
     width: 80px; } }

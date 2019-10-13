@@ -59,6 +59,7 @@
 <?php get_template_part('loops/content', 'home'); ?>
 
 <div class="container">
+		<h2 class="h2 line">Отзывы</h2>
     <?php echo do_shortcode('[bw-reviews] '); ?>
 </div>
 
