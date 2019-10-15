@@ -1,0 +1,239 @@
+.services {
+	padding: 100px 0;
+}
+
+.services .tabs__title {
+	position: relative;
+	text-align: center;
+	font-weight: bold;
+	font-size: 20px;
+	line-height: 25px;
+	margin-bottom: 80px;
+	text-transform: uppercase;
+}
+
+.services .tabs__title::after {
+	content: "";
+	display: block;
+	width: 208px;
+	height: 1px;
+	position: absolute;
+	bottom: -15px;
+	left: 50%;
+	-webkit-transform: translateX(-50%);
+	-ms-transform: translateX(-50%);
+	transform: translateX(-50%);
+	background: #E96524;
+	opacity: 0.3;
+}
+
+.services .tab-menu {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: start;
+	-webkit-justify-content: flex-start;
+	-ms-flex-pack: start;
+	justify-content: flex-start;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	-ms-flex-align: center;
+	align-items: center;
+}
+
+.services .tab-menu__item {
+	width: 16.66666666666667%;
+	margin: 0;
+	font-weight: 600;
+}
+
+.services .tab-menu__item:hover {
+	cursor: pointer;
+}
+
+.services .tab-menu__item.active .tab-menu__cont {
+	position: relative;
+	background: #F3F3F3;
+}
+
+.services .tab-menu__item.active .tab-menu__cont::before {
+	content: "";
+	display: block;
+	width: 100%;
+	height: 5px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background: #E96524;
+}
+
+.services .tab-menu__icon {
+	width: auto;
+	max-height: 70px;
+	display: block;
+	margin: 0 auto 31px;
+}
+
+.services .tab-menu__cont {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	min-height: 81px;
+	-webkit-box-pack: center;
+	-webkit-justify-content: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	-ms-flex-align: center;
+	align-items: center;
+	height: 100%;
+	padding: 21px 30px 20px;
+	font-weight: 600;
+	font-size: 12px;
+	line-height: 20px;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+.services .tab-content__item {
+	position: relative;
+	display: none;
+	background-color: #F3F3F3;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	width: 100%;
+	padding: 30px 40px;
+	z-index: 2;
+}
+
+.services .service-info {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+}
+
+.services .service-info__left {
+	min-width: 235px;
+	margin-right: 100px;
+}
+
+.services .service-info__right {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-webkit-flex-direction: column;
+	-ms-flex-direction: column;
+	flex-direction: column;
+	-webkit-box-pack: justify;
+	-webkit-justify-content: space-between;
+	-ms-flex-pack: justify;
+	justify-content: space-between;
+}
+
+.services .service-list {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.services .service-list__item {
+	padding-left: 20px;
+	position: relative;
+	line-height: 46px;
+}
+
+.services .service-list__item::before {
+	content: "";
+	display: block;
+	width: 8px;
+	height: 8px;
+	position: absolute;
+	top: 16px;
+	left: 0;
+	background: #E96524;
+	-webkit-border-radius: 50%;
+	border-radius: 50%;
+}
+
+.services .service-industry__title {
+	margin-bottom: 20px;
+	color: #E96524;
+	font-weight: 600;
+}
+
+.services .industry-list {
+	font-size: 0;
+	margin: 0 auto 30px;
+	padding: 0;
+}
+
+.services .industry-list .industry-list__item {
+	display: inline-block;
+	margin-right: 15px;
+	padding: 10.5px 16px;
+	border: 1px solid #D0D0D0;
+	-webkit-border-radius: 2px;
+	border-radius: 2px;
+	font-size: 12px;
+}
+
+.services .industry-list .industry-list__item:last-child {
+	margin: 0;
+}
+
+@media (max-width: 1200px) {
+	.services .industry-list__item {
+		margin: 0 10px 5px 0;
+	}
+}
+
+@media (max-width: 768px) {
+	.services-info__left {
+		min-width: 50%;
+		margin-right: 20px;
+	}
+
+	.services .tab-menu {
+		-webkit-box-pack: center;
+		-webkit-justify-content: center;
+		-ms-flex-pack: center;
+		justify-content: center;
+		-webkit-flex-wrap: wrap;
+		-ms-flex-wrap: wrap;
+		flex-wrap: wrap;
+	}
+
+	.services .tab-menu__item {
+		min-width: 130px;
+		margin-bottom: 20px;
+	}
+
+	.services-info__right {
+		width: 45%;
+	}
+
+	.services .tab-content {
+		margin-top: -20px;
+	}
+}
+
+@media (max-width: 480px) {
+	.service-info {
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		-webkit-flex-direction: column;
+		-ms-flex-direction: column;
+		flex-direction: column;
+	}
+
+	.service-info__left {
+		margin-bottom: 30px;
+	}
+}
