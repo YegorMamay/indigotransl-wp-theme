@@ -233,4 +233,36 @@
             });
         });
     };
+
+    $('.slider').slick({
+		centerMode: true,
+		centerPadding: '60px',
+		slidesToShow: 4,
+		prevArrow: '<div class="prev"><i class="fas fa-chevron-left"></i></div>',
+		nextArrow: '<div class="next"><i class="fas fa-chevron-left"></i></div>',
+		arrows: true,
+		responsive: [
+			{
+				breakpoint: 992,
+				settings: {
+					centerPadding: '35px',
+					slidesToShow: 3
+				}
+			},
+			{
+				breakpoint: 768,
+				settings: {
+					centerPadding: '35px',
+					slidesToShow: 2
+				}
+			},
+			{
+				breakpoint: 576,
+				settings: {
+					centerPadding: '35px',
+					slidesToShow: 1
+				}
+			},
+		]
+	})
 })(window, document, jQuery, window.jpAjax);

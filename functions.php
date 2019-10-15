@@ -1,4 +1,5 @@
 <?php
+
 /**
  * All the functions are in the PHP pages in the `inc/` folder.
  */
@@ -24,5 +25,7 @@ require get_template_directory() . '/inc/feedback.php';
 require get_template_directory() . '/inc/shortcodes.php';
 require get_template_directory() . '/inc/meta-boxes.php';
 require get_template_directory() . '/inc/custom-post-types.php';
+
+require get_template_directory() . '/inc/services-block.php';
 
 require get_template_directory() . '/inc/LoadMorePosts.php';
