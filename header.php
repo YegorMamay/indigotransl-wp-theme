@@ -19,7 +19,7 @@
     <header class="page-header">
         <div class="container">
             <div class="row">
-                <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 col-xl-3">
+                <div class="col-xs-12 col-sm-4 col-md-3 col-lg-3 col-xl-3">
                     <div class="logo">
 	                    <?php get_default_logo_link([
                             'name'    => 'logo.svg',
@@ -32,7 +32,7 @@
                         ?>
                     </div>
                 </div>
-                <div class="col-xs-12 col-sm-12 col-md-7 col-lg-7 col-xl-7">
+                <div class="col-xs-12 col-sm-6 col-md-7 col-lg-7 col-xl-7">
     <?php if (has_nav_menu('main-nav')) { ?>
         <nav class="nav js-menu">
             <button type="button" tabindex="0" class="menu-item-close menu-close js-menu-close"></button>
@@ -48,7 +48,7 @@
         </nav>
     <?php } ?>
                 </div>
-                <div class="col-xs-12 col-sm-12 col-md-2 col-lg-2 col-xl-2">
+                <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2 col-xl-2">
                     <?php echo do_shortcode('[bw-social]'); ?>
                 </div>
             </div>

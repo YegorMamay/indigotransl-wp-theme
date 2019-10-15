@@ -8,13 +8,13 @@
 <?php get_header(); ?>
 
 
-<section class="first-screen" style="background-image: url(./assets/img/first-bg.jpg);">
+<section class="first-screen" style="background-image: url(/wp-content/themes/indigotransl-wp-theme/assets/img/first-bg.jpg);">
 	<div class="first-screen_opacity"></div>
 	<div class="container">
 		<h1 class="h1 line">Бесплатный аудит перевода одного языка на вашем сайте</h1>
 		<div class="h1_description">Оставьте нам заявку прямо сейчас, и мы бесплатно проведем аудит вашего сайта</div>
 		<div class="text-center">
-			<a href="#" class="btn btn-secondary">Просчитать проект</a>
+			<a href="#" class="btn btn-secondary btn-lg">Просчитать проект</a>
 		</div>
 		<div class="block-plus">
 			<div class="block-plus_item">
@@ -115,49 +115,53 @@
 	</div>
 </section>
 
-<div class="container">
-	<h2 class="h2 line">Отзывы</h2>
-	<?php echo do_shortcode('[bw-reviews] '); ?>
-</div>
+
+<section class="section-reviews">
+	<div class="container">
+		<h2 class="h2 line">Отзывы</h2>
+		<?php echo do_shortcode('[bw-reviews] '); ?>
+	</div>
+</section>
+
 
 
 <section class="section section-partners">
 	<div class="container">
 		<h2 class="h2 line">Наши клиенты и партнеры</h2>
 		
-		<?php echo do_shortcode('[show-logos]'); ?>
+		<!-- <?php echo do_shortcode('[show-logos]'); ?> -->
 		
 		<div class="slider">
 			<div class="slide">
-				<img src="./assets/img/partners-logo.png" alt="">
+				<img src="/wp-content/themes/indigotransl-wp-theme/assets/img/partners-logo.png" alt="">
 			</div>
 			<div class="slide">
-				<img src="./assets/img/partners-logo.png" alt="">
+				<img src="/wp-content/themes/indigotransl-wp-theme/assets/img/partners-logo.png" alt="">
 			</div>
 			<div class="slide">
-				<img src="./assets/img/partners-logo.png" alt="">
+				<img src="/wp-content/themes/indigotransl-wp-theme/assets/img/partners-logo.png" alt="">
 			</div>
 			<div class="slide">
-				<img src="./assets/img/partners-logo.png" alt="">
+				<img src="/wp-content/themes/indigotransl-wp-theme/assets/img/partners-logo.png" alt="">
 			</div>
 			<div class="slide">
-				<img src="./assets/img/partners-logo.png" alt="">
+				<img src="/wp-content/themes/indigotransl-wp-theme/assets/img/partners-logo.png" alt="">
 			</div>
 			<div class="slide">
-				<img src="./assets/img/partners-logo.png" alt="">
+				<img src="/wp-content/themes/indigotransl-wp-theme/assets/img/partners-logo.png" alt="">
 			</div>
 			<div class="slide">
-				<img src="./assets/img/partners-logo.png" alt="">
+				<img src="/wp-content/themes/indigotransl-wp-theme/assets/img/partners-logo.png" alt="">
 			</div>
 		</div>
 	</div>
 </section>
 
 
-<div class="block-line" style="background-image: url(./assets/img/line-bg.jpg);">
+<div class="block-line" style="background-image: url(/wp-content/themes/indigotransl-wp-theme/assets/img/line-bg.jpg);">
 	<div class="container">
 		<div class="description">При первом заказе скидка 5% вне зависимости от объема</div>
-		<a href="#" class="btn btn_none-border">Заказать проект</a>
+		<a href="#" class="btn btn-secondary btn-lg">Заказать проект</a>
 	</div>
 </div>
 

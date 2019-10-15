@@ -580,8 +580,10 @@ if (!function_exists('bw_reviews_shortcode')) {
                     $output .= '</a>';
                 }
                 $output .= '</div>';
+                $output .= '<div class="review-content-wrapper">';
                 $output .= '<div class="review-title text-bold">' . get_the_title() . '</div>';
                 $output .= '<div class="review-content">' . get_the_content() . '</div>';
+                $output .= '</div>';
 
                 $output .= '</div>';
             }
