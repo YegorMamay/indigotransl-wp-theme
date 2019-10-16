@@ -8,13 +8,13 @@
 <?php get_header(); ?>
 
 
-<section class="first-screen" style="background-image: url(/wp-content/themes/indigotransl-wp-theme/assets/img/first-bg.jpg);">
+<section class="first-screen">
 	<div class="first-screen_opacity"></div>
 	<div class="container">
 		<h1 class="h1 line">Бесплатный аудит перевода одного языка на вашем сайте</h1>
 		<div class="h1_description">Оставьте нам заявку прямо сейчас, и мы бесплатно проведем аудит вашего сайта</div>
 		<div class="text-center">
-			<a href="#" class="btn btn-secondary btn-lg">Просчитать проект</a>
+			<button class="btn btn-secondary btn-lg <?php the_lang_class('hero-call-back'); ?>">Просчитать проект</button>
 		</div>
 		<div class="block-plus">
 			<div class="block-plus_item">
@@ -102,7 +102,7 @@
 										</div>
 										<div class="wrap-button">
 											<a href="<?php the_field('sn_tab_list_link'); ?>" class="btn btn-secondary btn-lg"><?php the_field('sn_tab_list_text_link'); ?></a>
-											<button class="btn btn-outline-secondary btn-lg">Заказать проект</button>
+											<button class="btn btn-outline-secondary btn-lg <?php the_lang_class('serv-order'); ?>">Заказать проект</button>
 										</div>
 									</div>
 								</div>
@@ -128,9 +128,6 @@
 <section class="section section-partners">
 	<div class="container">
 		<h2 class="h2 line">Наши клиенты и партнеры</h2>
-		
-		<!-- <?php echo do_shortcode('[show-logos]'); ?> -->
-		
 		<div class="slider">
 			<div class="slide">
 				<img src="/wp-content/themes/indigotransl-wp-theme/assets/img/partners-logo.png" alt="">
@@ -161,7 +158,7 @@
 <div class="block-line" style="background-image: url(/wp-content/themes/indigotransl-wp-theme/assets/img/line-bg.jpg);">
 	<div class="container">
 		<div class="description">При первом заказе скидка 5% вне зависимости от объема</div>
-		<a href="#" class="btn btn-secondary btn-lg">Заказать проект</a>
+		<a href="#" class="btn btn-secondary btn-lg <?php the_lang_class('serv-order-action'); ?>"><?php _e('Order project', 'brainworks') ?></a>
 	</div>
 </div>
 

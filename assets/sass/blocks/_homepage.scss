@@ -166,6 +166,7 @@
 	align-items: center;
 	background-repeat: no-repeat;
 	background-size: cover;
+    background-image: url(/wp-content/themes/indigotransl-wp-theme/assets/img/first-bg.jpg);
 }
 
 .first-screen_opacity {
@@ -385,7 +386,8 @@
 }
 
 .menu-container{
-    
+    display: flex;
+    justify-content: center;
 }
 
 .page-header > .container > .row{
