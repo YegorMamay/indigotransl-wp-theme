@@ -29,8 +29,7 @@
 </section>
 
 
-
-<section class="section section-about">
+<section class="section section-about" id="about">
 	<div class="container">
 		<h2 class="h2 line"><?php the_field('sn_block_title_2'); ?></h2>
 		<div class="h2_description"><?php the_field('sn_block_desc_2'); ?></div>
@@ -48,10 +47,8 @@
 	</div>
 </section>
 
-<?php get_template_part('loops/content', 'home'); ?>
 
-
-<section class="services">
+<section class="services" id="services">
 	<div class="container">
 		<div class="row">
 			<div class="tabs col-12">
@@ -110,7 +107,7 @@
 </section>
 
 
-<section class="section-reviews">
+<section class="section-reviews" id="reviews">
 	<div class="container">
 		<h2 class="h2 line"><?php the_field('sn_block_fore_title'); ?></h2>
 		<?php echo do_shortcode('[bw-reviews]'); ?>
@@ -118,7 +115,7 @@
 </section>
 
 
-<section class="section section-partners">
+<section class="section section-partners" id="partners">
 	<div class="container">
 		<h2 class="h2 line"><?php the_field('sn_block_5_title'); ?></h2>
 		<?php $sn_partners = new WP_Query(array('post_type' => 'stylenova_part', 'posts_per_page' => -1)); ?>
@@ -143,7 +140,7 @@
 </div>
 
 
-<section class="section">
+<section class="section" id="steps">
 	<div class="container">
 		<div class="row">
 			<div class="col-12">
@@ -191,6 +188,9 @@
 		</div>
 	</div>
 </section>
+
+
+<?php get_template_part('loops/content', 'home'); ?>
 
 
 <?php get_footer(); ?>
