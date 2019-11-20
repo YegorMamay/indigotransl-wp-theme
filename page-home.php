@@ -11,22 +11,20 @@
 <section class="first-screen">
 	<div class="first-screen_opacity"></div>
 	<div class="container">
-		<h1 class="h1 line">Бесплатный аудит перевода одного языка на вашем сайте</h1>
-		<div class="h1_description">Оставьте нам заявку прямо сейчас, и мы бесплатно проведем аудит вашего сайта</div>
+		<h1 class="h1 line"><?php the_field('sn_block_title_1'); ?></h1>
+		<div class="h1_description"><?php the_field('sn_block_desc_1'); ?></div>
 		<div class="text-center">
 			<button class="btn btn-secondary btn-lg <?php the_lang_class('hero-call-back'); ?>">Просчитать проект</button>
 		</div>
-		<div class="block-plus">
-			<div class="block-plus_item">
-				Квалифицированные переводчики по каждой тематике
+		<?php if (have_rows('sn_block_advas')) : ?>
+			<div class="block-plus">
+				<?php while (have_rows('sn_block_advas')) : the_row(); ?>
+					<div class="block-plus_item">
+						<?php the_sub_field('sn_block_advas_text'); ?>
+					</div>
+				<?php endwhile; ?>
 			</div>
-			<div class="block-plus_item">
-				Гарантия соблюдения форматирования при любом исходном формате документа
-			</div>
-			<div class="block-plus_item">
-				Использование передового лицензированного программного обеспечения для перевода и подготовки и перевода документов
-			</div>
-		</div>
+		<?php endif; ?>
 	</div>
 </section>
 
@@ -34,26 +32,19 @@
 
 <section class="section section-about">
 	<div class="container">
-		<h2 class="h2 line">О нашей компании</h2>
-		<div class="h2_description">C помощью этого онлайн-генератора рыботекста можно пачками плодить как отдельные предложения, так и целые абзацы отменнейшего рыбы-текста. А для любителей автоматизации даже реализован API фиштекста.</div>
-		<div class="block-result">
-			<div class="block-result_item">
-				<div class="number line">6</div>
-				<div class="number_title">лет успешной работы</div>
+		<h2 class="h2 line"><?php the_field('sn_block_title_2'); ?></h2>
+		<div class="h2_description"><?php the_field('sn_block_desc_2'); ?></div>
+
+		<?php if (have_rows('sn_block_abouts')) : ?>
+			<div class="block-result">
+				<?php while (have_rows('sn_block_abouts')) : the_row(); ?>
+					<div class="block-result_item">
+						<div class="number line"><?php the_sub_field('sn_block_abouts_title'); ?></div>
+						<div class="number_title"><?php the_sub_field('sn_block_abouts_text'); ?></div>
+					</div>
+				<?php endwhile; ?>
 			</div>
-			<div class="block-result_item">
-				<div class="number line">1000+</div>
-				<div class="number_title">успешно выполненных проектов</div>
-			</div>
-			<div class="block-result_item">
-				<div class="number line">10000+</div>
-				<div class="number_title">слоев переводимых ежедневно</div>
-			</div>
-			<div class="block-result_item">
-				<div class="number line">12+</div>
-				<div class="number_title">рабочих языков</div>
-			</div>
-		</div>
+		<?php endif; ?>
 	</div>
 </section>
 
@@ -64,19 +55,21 @@
 	<div class="container">
 		<div class="row">
 			<div class="tabs col-12">
-				<div class="tabs__title">Услуги</div>
+				<div class="tabs__title"><?php the_field('sn_block_tree_title'); ?></div>
 				<?php $sn_services = new WP_Query(array('post_type' => 'stylenova_service', 'posts_per_page' => 8)); ?>
 				<div class="tab-menu">
 					<?php if ($sn_services->have_posts()) : while ($sn_services->have_posts()) : $sn_services->the_post();  ?>
-							<div class="tab-menu__item">
+							<div class="tab-menu__item tab-menu__item_<?php the_lang_class('hero-call-back'); ?>">
 								<div class="tab-menu__img"><?php the_post_thumbnail('thumbnail', array('class' => 'tab-menu__icon')) ?></div>
 								<div class="tab-menu__cont"><span class="title-tab"><?php the_title() ?></span></div>
 							</div>
 						<?php endwhile ?>
 					<?php endif ?>
+					<?php wp_reset_postdata(); ?>
 				</div>
 
 				<div class="tab-content">
+					<?php $unique = 0; ?>
 					<?php if ($sn_services->have_posts()) : while ($sn_services->have_posts()) : $sn_services->the_post();  ?>
 							<div class="tab-content__item">
 								<div class="service-info">
@@ -102,13 +95,14 @@
 										</div>
 										<div class="wrap-button">
 											<a href="<?php the_field('sn_tab_list_link'); ?>" class="btn btn-secondary btn-lg"><?php the_field('sn_tab_list_text_link'); ?></a>
-											<button class="btn btn-outline-secondary btn-lg <?php the_lang_class('serv-order'); ?>">Заказать проект</button>
+											<button class="btn btn-outline-secondary btn-lg btn-unique_<?= ++$unique; ?>">Заказать проект</button>
 										</div>
 									</div>
 								</div>
 							</div>
 						<?php endwhile ?>
 					<?php endif ?>
+					<?php wp_reset_postdata(); ?>
 				</div>
 			</div>
 		</div>
@@ -118,38 +112,24 @@
 
 <section class="section-reviews">
 	<div class="container">
-		<h2 class="h2 line">Отзывы</h2>
-		<?php echo do_shortcode('[bw-reviews] '); ?>
+		<h2 class="h2 line"><?php the_field('sn_block_fore_title'); ?></h2>
+		<?php echo do_shortcode('[bw-reviews]'); ?>
 	</div>
 </section>
 
 
-
 <section class="section section-partners">
 	<div class="container">
-		<h2 class="h2 line">Наши клиенты и партнеры</h2>
+		<h2 class="h2 line"><?php the_field('sn_block_5_title'); ?></h2>
+		<?php $sn_partners = new WP_Query(array('post_type' => 'stylenova_part', 'posts_per_page' => -1)); ?>
 		<div class="slider">
-			<div class="slide">
-				<img src="/wp-content/themes/indigotransl-wp-theme/assets/img/partners-logo.png" alt="">
-			</div>
-			<div class="slide">
-				<img src="/wp-content/themes/indigotransl-wp-theme/assets/img/partners-logo.png" alt="">
-			</div>
-			<div class="slide">
-				<img src="/wp-content/themes/indigotransl-wp-theme/assets/img/partners-logo.png" alt="">
-			</div>
-			<div class="slide">
-				<img src="/wp-content/themes/indigotransl-wp-theme/assets/img/partners-logo.png" alt="">
-			</div>
-			<div class="slide">
-				<img src="/wp-content/themes/indigotransl-wp-theme/assets/img/partners-logo.png" alt="">
-			</div>
-			<div class="slide">
-				<img src="/wp-content/themes/indigotransl-wp-theme/assets/img/partners-logo.png" alt="">
-			</div>
-			<div class="slide">
-				<img src="/wp-content/themes/indigotransl-wp-theme/assets/img/partners-logo.png" alt="">
-			</div>
+			<?php if ($sn_partners->have_posts()) : while ($sn_partners->have_posts()) : $sn_partners->the_post();  ?>
+					<div class="slide">
+						<?php the_post_thumbnail(); ?>
+					</div>
+				<?php endwhile ?>
+			<?php endif ?>
+			<?php wp_reset_postdata(); ?>
 		</div>
 	</div>
 </section>
@@ -157,7 +137,7 @@
 
 <div class="block-line" style="background-image: url(/wp-content/themes/indigotransl-wp-theme/assets/img/line-bg.jpg);">
 	<div class="container">
-		<div class="description">При первом заказе скидка 5% вне зависимости от объема</div>
+		<div class="description"><?php the_field('sn_blocks_six_text'); ?></div>
 		<a href="#" class="btn btn-secondary btn-lg <?php the_lang_class('serv-order-action'); ?>"><?php _e('Order project', 'brainworks') ?></a>
 	</div>
 </div>
@@ -168,94 +148,46 @@
 		<div class="row">
 			<div class="col-12">
 				<div class="section_title">
-					Порядок выполнения проекта
+					<?php the_field('sn_block_7_title'); ?>
 				</div>
 			</div>
 		</div>
+
 		<div class="row step_items">
-			<div class="col-12 col-sm-6 col-lg-3">
-				<div class="step">
-					<div class="step_img">
-						<img src="/wp-content/themes/indigotransl-wp-theme/assets/img/step1.svg" alt="">
+
+			<?php if (have_rows('sn_block_7_pv')) : ?>
+				<?php while (have_rows('sn_block_7_pv')) : the_row(); ?>
+					<div class="col-12 col-sm-6 col-lg-3">
+						<div class="step">
+							<div class="step_img">
+								<img src="<?php the_sub_field('sn_block_7_pv_icon'); ?>" alt="">
+							</div>
+							<div class="step_title">
+								<?php the_sub_field('sn_block_7_pv_text'); ?>
+							</div>
+						</div>
 					</div>
-					<div class="step_title">
-						Получение <br> запроса
-					</div>
-				</div>
-			</div>
-			<div class="col-12 col-sm-6 col-lg-3">
-				<div class="step">
-					<div class="step_img">
-						<img src="/wp-content/themes/indigotransl-wp-theme/assets/img/step2.svg" alt="">
-					</div>
-					<div class="step_title">
-						Согласование <br> стоимости и сроков
-					</div>
-				</div>
-			</div>
-			<div class="col-12 col-sm-6 col-lg-3">
-				<div class="step">
-					<div class="step_img">
-						<img src="/wp-content/themes/indigotransl-wp-theme/assets/img/step3.svg" alt="">
-					</div>
-					<div class="step_title">
-						Допереводческая <br> обработка
-					</div>
-				</div>
-			</div>
-			<div class="col-12 col-sm-6 col-lg-3">
-				<div class="step step_arc step_arc__right">
-					<div class="step_img">
-						<img src="/wp-content/themes/indigotransl-wp-theme/assets/img/step4.svg" alt="">
-					</div>
-					<div class="step_title">
-						Перевод
-					</div>
-				</div>
-			</div>
+				<?php endwhile; ?>
+			<?php endif; ?>
+
 			<div class="col-12 col-xs-12">
 				<div class="step_separator"></div>
 			</div>
-			<div class="col-12 col-sm-6 col-lg-3">
-				<div class="step step step_arc step_arc__left">
-					<div class="step_img">
-						<img src="/wp-content/themes/indigotransl-wp-theme/assets/img/step5.svg" alt="">
+
+			<?php if (have_rows('sn_block_7_pv_2')) : ?>
+				<?php while (have_rows('sn_block_7_pv_2')) : the_row(); ?>
+					<div class="col-12 col-sm-6 col-lg-3">
+						<div class="step">
+							<div class="step_img">
+								<img src="<?php the_sub_field('sn_block_7_pv_icon'); ?>" alt="">
+							</div>
+							<div class="step_title">
+								<?php the_sub_field('sn_block_7_pv_text'); ?>
+							</div>
+						</div>
 					</div>
-					<div class="step_title">
-						Получение <br> запроса
-					</div>
-				</div>
-			</div>
-			<div class="col-12 col-sm-6 col-lg-3">
-				<div class="step">
-					<div class="step_img">
-						<img src="/wp-content/themes/indigotransl-wp-theme/assets/img/step6.svg" alt="">
-					</div>
-					<div class="step_title">
-						Согласование <br> стоимости и сроков
-					</div>
-				</div>
-			</div>
-			<div class="col-12 col-sm-6 col-lg-3">
-				<div class="step">
-					<div class="step_img">
-						<img src="/wp-content/themes/indigotransl-wp-theme/assets/img/step7.svg" alt="">
-					</div>
-					<div class="step_title">
-						Допереводческая <br> обработка
-					</div>
-				</div>
-			</div>
-			<div class="col-12 col-sm-6 col-lg-3">
-				<div class="step step_last">
-					<div class="step_img">
-						<img src="/wp-content/themes/indigotransl-wp-theme/assets/img/step8.svg" alt="">
-					</div>
-					<div class="step_title">
-						Перевод
-					</div>
-				</div>
-			</div>
+				<?php endwhile; ?>
+			<?php endif; ?>
 		</div>
 	</div>
 </section>

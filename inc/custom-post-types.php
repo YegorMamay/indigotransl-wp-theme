@@ -83,3 +83,48 @@ function stylenova_services()
     register_post_type('stylenova_service', $args);
 }
 add_action('init', 'stylenova_services', 0);
+
+// Register Custom Post Type
+function stylenova_partners()
+{
+    $labels = array(
+        'name'                  => 'Партнеры',
+        'singular_name'         => 'Партнер',
+        'menu_name'             => 'Партнеры',
+        'add_new_item'          => 'Добавить новый',
+        'add_new'               => 'Добавить новый',
+        'new_item'              => 'Новый',
+        'edit_item'             => 'Редактировать',
+        'update_item'           => 'Обновить',
+        'view_item'             => 'Просмотр',
+        'view_items'            => 'Посмотреть все',
+    );
+    $rewrite = array(
+        'slug'                  => 'services',
+        'with_front'            => true,
+        'pages'                 => true,
+        'feeds'                 => true,
+    );
+    $args = array(
+        'label'                 => 'Партнер',
+        'labels'                => $labels,
+        'supports'              => array('title', 'thumbnail'),
+        'hierarchical'          => false,
+        'public'                => true,
+        'show_ui'               => true,
+        'show_in_menu'          => true,
+        'menu_position'         => 4,
+        'menu_icon'             => 'dashicons-businessman',
+        'show_in_admin_bar'     => true,
+        'show_in_nav_menus'     => false,
+        'can_export'            => true,
+        'has_archive'           => true,
+        'exclude_from_search'   => false,
+        'publicly_queryable'    => true,
+        'query_var'             => 'snservice',
+        'rewrite'               => $rewrite,
+        'capability_type'       => 'page',
+    );
+    register_post_type('stylenova_part', $args);
+}
+add_action('init', 'stylenova_partners', 0);
