@@ -14,7 +14,9 @@
 		<h1 class="h1 line"><?php the_field('sn_block_title_1'); ?></h1>
 		<div class="h1_description"><?php the_field('sn_block_desc_1'); ?></div>
 		<div class="text-center">
-			<button class="btn btn-secondary btn-lg <?php the_lang_class('hero-call-back'); ?>">Просчитать проект</button>
+		<p class="text-white">Сколько это будет стоить?</p>
+		<div class="sp-xs-2"></div>
+			<button class="btn btn-secondary btn-lg <?php the_lang_class('hero-call-back'); ?>"><?php _e('Рассчитать проект', 'brainworks') ?></button>
 		</div>
 		<?php if (have_rows('sn_block_advas')) : ?>
 			<div class="block-plus">
@@ -26,10 +28,14 @@
 			</div>
 		<?php endif; ?>
 	</div>
+	
+<div class="sp-xs-5sp-sm-5 sp-md-8 sp-lg-8 sp-xl-7"></div>
 </section>
 
 
 <section class="section section-about" id="about">
+    <div class="sp-xs-5sp-sm-5 sp-md-8 sp-lg-8 sp-xl-7"></div>
+
 	<div class="container">
 		<h2 class="h2 line"><?php the_field('sn_block_title_2'); ?></h2>
 		<div class="h2_description"><?php the_field('sn_block_desc_2'); ?></div>
@@ -45,10 +51,14 @@
 			</div>
 		<?php endif; ?>
 	</div>
+	
+<div class="sp-xs-5sp-sm-5 sp-md-8 sp-lg-8 sp-xl-7"></div>
 </section>
 
 
 <section class="services" id="services">
+<div class="sp-xs-5sp-sm-5 sp-md-8 sp-lg-8 sp-xl-7"></div>
+
 	<div class="container">
 		<div class="row">
 			<div class="tabs col-12">
@@ -104,18 +114,26 @@
 			</div>
 		</div>
 	</div>
+	
+<div class="sp-xs-5sp-sm-5 sp-md-8 sp-lg-8 sp-xl-7"></div>
 </section>
 
 
 <section class="section-reviews" id="reviews">
+<div class="sp-xs-5sp-sm-5 sp-md-8 sp-lg-8 sp-xl-7"></div>
+
 	<div class="container">
 		<h2 class="h2 line"><?php the_field('sn_block_fore_title'); ?></h2>
 		<?php echo do_shortcode('[bw-reviews]'); ?>
 	</div>
+	
+<div class="sp-xs-5sp-sm-5 sp-md-8 sp-lg-8 sp-xl-7"></div>
 </section>
 
 
 <section class="section section-partners" id="partners">
+<div class="sp-xs-5sp-sm-5 sp-md-8 sp-lg-8 sp-xl-7"></div>
+
 	<div class="container">
 		<h2 class="h2 line"><?php the_field('sn_block_5_title'); ?></h2>
 		<?php $sn_partners = new WP_Query(array('post_type' => 'stylenova_part', 'posts_per_page' => -1)); ?>
@@ -129,6 +147,8 @@
 			<?php wp_reset_postdata(); ?>
 		</div>
 	</div>
+	
+<div class="sp-xs-5sp-sm-5 sp-md-8 sp-lg-8 sp-xl-7"></div>
 </section>
 
 
@@ -141,6 +161,8 @@
 
 
 <section class="section" id="steps">
+<div class="sp-xs-5sp-sm-5 sp-md-8 sp-lg-8 sp-xl-7"></div>
+
 	<div class="container">
 		<div class="row">
 			<div class="col-12">
@@ -186,7 +208,12 @@
 				<?php endwhile; ?>
 			<?php endif; ?>
 		</div>
+		
+    <div class="sp-xs-4"></div>
+	<p class="text-center">Самый сложный пункт в жизни каждого проекта - это пункт 7. <br>Пройти его может только идеально выполненный проект без опечаток, неточностей и ошибок другого рода.</p>
 	</div>
+	
+<div class="sp-xs-5sp-sm-5 sp-md-8 sp-lg-8 sp-xl-7"></div>
 </section>
 
 

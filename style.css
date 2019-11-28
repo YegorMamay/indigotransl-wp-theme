@@ -7,9 +7,10 @@ Author URI: https://brainworks.com.ua
 Description:
 License:
 License URI:
-Version: 16.10.2019
+Version: 20.11.2019
 Tags: one-column, two-columns, full-width-template, e-commerce
 */
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700&display=swap&subset=cyrillic,cyrillic-ext");
 html,
 body,
 div,
@@ -6750,7 +6751,7 @@ fieldset:disabled a.btn {
 
 .btn-lg {
   padding: 8px 16px;
-  font-size: 20px;
+  font-size: 14px;
   line-height: 1.5;
   border-radius: 2px; }
 
@@ -7455,7 +7456,7 @@ i.button-style {
   padding: 3px 8px; }
 
 span {
-  font-weight: 400; }
+  font-weight: 600; }
 
 @media (max-width: 544px) {
   p {
@@ -8497,10 +8498,6 @@ hr.style-two {
       color: #E96524;
       text-decoration: underline; }
 
-.section {
-  padding-top: 100px;
-  padding-bottom: 100px; }
-
 .section_title {
   font-size: 20px;
   line-height: 25px;
@@ -8593,8 +8590,6 @@ hr.style-two {
   opacity: .3; }
 
 .h1_description {
-  font-weight: 500;
-  font-size: 14px;
   line-height: 25px;
   color: #fff;
   text-align: center;
@@ -8610,7 +8605,6 @@ hr.style-two {
 
 .h2_description {
   margin-top: 24px;
-  font-weight: 500;
   font-size: 14px;
   line-height: 25px;
   text-align: center;
@@ -8672,9 +8666,7 @@ hr.style-two {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  font-size: 14px;
   line-height: 20px;
-  font-weight: 500;
   position: relative; }
 
 .block-plus_item:before {
@@ -8686,7 +8678,7 @@ hr.style-two {
   left: 0; }
 
 .block-plus_item:nth-child(1) {
-  width: 250px; }
+  width: 350px; }
 
 .block-plus_item:nth-child(1)::before {
   background-image: url(./assets/img/plus1.png); }
@@ -8698,13 +8690,10 @@ hr.style-two {
   background-image: url(./assets/img/plus2.png); }
 
 .block-plus_item:nth-child(3) {
-  width: 426px; }
+  width: 375px; }
 
 .block-plus_item:nth-child(3)::before {
   background-image: url(./assets/img/plus3.png); }
-
-.section {
-  padding-top: 94px; }
 
 .section-partners {
   padding-bottom: 80px; }
@@ -8818,7 +8807,7 @@ hr.style-two {
   transition: .3s;
   cursor: pointer;
   height: 100%;
-  z-index: 999;
+  z-index: 2;
   top: 0;
   border-radius: 0;
   border: none;
@@ -8865,7 +8854,6 @@ hr.style-two {
   margin: 0; }
 
 .description {
-  font-weight: 500;
   font-size: 20px;
   line-height: 25px;
   color: #fff; }
@@ -8951,14 +8939,10 @@ hr.style-two {
           align-items: flex-start; }
 .review-slider .review-content {
   font-size: 14px;
-  font-weight: 500;
   color: #222222; }
 
 .home {
   background-color: #FAFAFA; }
-
-.section-reviews {
-  padding-top: 94px; }
 
 @media (max-width: 1199.98px) {
   .step::after {
@@ -9384,7 +9368,7 @@ img {
   .btn-lg {
     padding-top: 15px;
     padding-bottom: 15px;
-    font-size: 12px;
+    font-size: 15px;
     width: 240px;
     font-weight: 600; }
     .btn-lg.btn-sedondary {
