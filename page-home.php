@@ -55,6 +55,14 @@
 <div class="sp-xs-5sp-sm-5 sp-md-8 sp-lg-8 sp-xl-7"></div>
 </section>
 
+<section class="section section-about" id="about">
+    <div class="container">
+		<h2 class="h2 line">Языки, с которыми мы работаем</h2>
+
+    <?php get_template_part('loops/content', 'home'); ?>
+	</div>
+
+</section>
 
 <section class="services" id="services">
 <div class="sp-xs-5sp-sm-5 sp-md-8 sp-lg-8 sp-xl-7"></div>
@@ -215,9 +223,5 @@
 	
 <div class="sp-xs-5sp-sm-5 sp-md-8 sp-lg-8 sp-xl-7"></div>
 </section>
-
-
-<?php get_template_part('loops/content', 'home'); ?>
-
 
 <?php get_footer(); ?>
